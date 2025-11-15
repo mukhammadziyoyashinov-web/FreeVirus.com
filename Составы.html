@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Фут Вики</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
+            display: flex;
+        }
+
+        /* Левый и правый колонтитул */
+        .sidebar {
+            width: 120px;
+            background: #222;
+            border-right: 2px solid #444;
+        }
+
+        .sidebar.right {
+            border-left: 2px solid #444;
+            border-right: none;
+        }
+
+        /* Контент */
+        .content {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            font-size: 42px;
+            letter-spacing: 2px;
+        }
+
+        /* Сетка картинок */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(6px);
+            transform: scale(1.1);
+            transition: .3s;
+        }
+
+
+        .card:hover img {
+            filter: blur(0px);
+            transform: scale(1.05);
+        }
+
+        .card span {
+            position: absolute;
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 0px 0px 5px black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar"></div>
+
+    <div class="content">
+        <h1>Фут Вики</h1>
+
+        <div class="grid">
+
+            <!-- 1 ряд -->
+            <div class="card">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0f/Premier_League_2016_Logo.svg/640px-Premier_League_2016_Logo.svg.png">
+                <span>Лиги</span>
+            </div>
+
+            <div class="card">
+                <img src="https://i.imgur.com/SnAwE2W.jpeg">
+                <span>Тир Лист</span>
+            </div>
+
+            <!-- 2 ряд -->
+            <div class="card">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/8/87/Argentina_versus_Nigeria_%28cropped%29.jpg">
+                <span>Составы</span>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/400">
+                <span>Скоро</span>
+            </div>
+
+            <!-- 3 ряд -->
+            <div class="card">
+                <img src="https://via.placeholder.com/400">
+                <span>Скоро</span>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/400">
+                <span>Скоро</span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="sidebar right"></div>
+
+</body>
+
+</html>
